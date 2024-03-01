@@ -115,7 +115,10 @@
 // This task will help you understand how to handle GET requests and validate input in PHP. Good luck!
     ?>
 
-    <!-- <form method="get" action="<?PHP echo $_SERVER['PHP_SELF']; ?>">
+    <!-- <form method="get" action="
+    <?PHP
+    // echo $_SERVER['PHP_SELF']; 
+    ?>">
     name: <input type=" text" name="name"><br>
     email: <input type="text" name="email"><br>
     <input type="submit">
@@ -123,52 +126,61 @@
 
     welcome
     <?php
-    if (isset($_GET["name"])) {
-        echo $_GET["name"] . "!";
-    } else {
-        echo "invalid name";
-    }
-    ?>
-    Your email address is
-    <?php
-    if (isset($_GET["email"])) {
-        if (!filter_input(INPUT_GET, "email", FILTER_VALIDATE_EMAIL) === false) {
-            echo $_GET["email"];
-        } else {
-            echo "invalid email";
-        }
-    } ?> -->
+    // if (isset($_GET["name"])) {
+    //     echo $_GET["name"] . "!";
+    // } else {
+    //     echo "invalid name";
+    // }
+    //             ?>
+    // Your email address is
+    // <?php
+    // if (isset($_GET["email"])) {
+    //     if (!filter_input(INPUT_GET, "email", FILTER_VALIDATE_EMAIL) === false) {
+    //         echo $_GET["email"];
+    //     } else {
+    //         echo "invalid email";
+    //     }
+    // } 
+    ?> -->
 
     <!-- correction from githubcopilot -->
-    <form method="get" action="<?PHP echo $_SERVER['PHP_SELF']; ?>">
+    <!-- <form method="get" action="
+    <?PHP
+    // echo $_SERVER['PHP_SELF']; 
+    ?>">
         name: <input type=" text" name="name"><br>
         email: <input type="text" name="email"><br>
         <input type="submit">
-    </form>
+    </form> -->
     <?php
-    if (isset($_GET["name"]) && !empty(trim($_GET["name"]))) /*checks if the name is valid*/{
-        $name = $_GET["name"]; //creates a variable named name and assigns it the value of the variable name
-    } else /*if the name is not valid*/{
-        echo "Invalid name"; //echos the string Invalid name
-        exit;
-    }
-
-    if (isset($_GET["email"]) && filter_input(INPUT_GET, "email", FILTER_VALIDATE_EMAIL)) /*checks if the email is valid*/{
-        $email = $_GET["email"]; //creates a variable named email and assigns it the value of the variable email
-    } else /*if the email is not valid*/{
-        echo "Invalid email"; //echos the string Invalid email
-        exit;
-    }
-
-    echo "Welcome, " . $name . "! Your email address is " . $email . ".";
+    // if (isset($_GET["name"]) && !empty(trim($_GET["name"]))) /*checks if the name is valid*/{
+    //     $name = $_GET["name"]; //creates a variable named name and assigns it the value of the variable name
+    // } else /*if the name is not valid*/{
+    //     echo "Invalid name"; //echos the string Invalid name
+    //     exit;
+    // }
+    
+    // if (isset($_GET["email"]) && filter_input(INPUT_GET, "email", FILTER_VALIDATE_EMAIL)) /*checks if the email is valid*/{
+    //     $email = $_GET["email"]; //creates a variable named email and assigns it the value of the variable email
+    // } else /*if the email is not valid*/{
+    //     echo "Invalid email"; //echos the string Invalid email
+    //     exit;
+    // }
+    
+    // echo "Welcome, " . $name . "! Your email address is " . $email . ".";
     ?>
 
     <!-- -------------------------------------------- -->
 
-<?php
+    <?php
+    // include 'test.php';
+    
+    // echo display_student_info($student)
+    ?>
 
-?>
-
+    <?php
+    include 'verification.php'
+        ?>
 
 </body>
 
